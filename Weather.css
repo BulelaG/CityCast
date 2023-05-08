@@ -12,6 +12,13 @@ h1 {
    font-weight: 400;
 }
 
+h4{
+    padding-top: 20px;
+    text-align: center;
+    /* font-family: fantasy; */
+    font-weight: 400;   
+}
+
 body{
     background-image: url(./weathweather-bg.jpg);
     background-size: cover;
@@ -43,7 +50,7 @@ body{
 }
 
 .search-box input{
-    color: #9c8d6c;
+    color: #11100d;
     width: 80%;
     font-size: 24px;
     font-weight: 500;
