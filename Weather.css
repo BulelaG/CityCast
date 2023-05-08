@@ -26,14 +26,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(145, 166, 199);
 }
 
 .container{
     position: relative;
     width: 400px;
     height: 205px;
-    background: #08d464;
+    background: #99a1ce;
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
@@ -50,8 +50,9 @@ body{
 }
 
 .search-box input{
+    border-radius: 5%;
     color: #11100d;
-    width: 80%;
+    width: 88%;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
@@ -67,10 +68,10 @@ body{
 
 .search-box button{
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     color: #7a6c17;
-    background: #b88c0a;
+    background: #d0cbbc;
     border-radius: 50%;
     font-size: 22px;
     transition: 0.4s ease;
@@ -82,9 +83,10 @@ body{
 }
 
 .search-box i{
+    padding-left: 5px;
     position: absolute;
     color: #be1818;
-    font-size: 28px;
+    font-size: 21px;
 }
 
 .weather-box{

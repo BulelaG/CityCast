@@ -37,6 +37,7 @@ search.addEventListener('click', () => {
             // const cityName = document.querySelector('.cityName');
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
+            const country = document.querySelector('.weather-box .cityName');
             const description = document.querySelector('.weather-box .description');
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
@@ -65,10 +66,13 @@ search.addEventListener('click', () => {
                 default:
                     image.src = '';
             }
-            // cityName.innerHTML = `${response.name}%`
+
+//            
             humidity.innerHTML = `${json.main.humidity}%`
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
+            country.innerHTML = `${json.name}`;
+
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
