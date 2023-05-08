@@ -33,8 +33,7 @@ search.addEventListener('click', () => {
 
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
-            
-            // const cityName = document.querySelector('.cityName');
+            const d = new Date();
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
             const country = document.querySelector('.weather-box .cityName');
@@ -67,12 +66,11 @@ search.addEventListener('click', () => {
                     image.src = '';
             }
 
-//            
+            document.getElementById("currentTime").innerHTML = d;
+            country.innerHTML = `${json.name}`; 
             humidity.innerHTML = `${json.main.humidity}%`
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
-            country.innerHTML = `${json.name}`;
-
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
