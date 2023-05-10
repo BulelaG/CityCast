@@ -22,6 +22,7 @@ search.addEventListener('click', () => {
         .then(response => response.json())
         .then(json => {
 
+            console.log(json)
             if (json.cod === '404') {
                 container.style.height = '400px';
                 weatherBox.style.display = 'none';
@@ -34,9 +35,10 @@ search.addEventListener('click', () => {
             error404.style.display = 'none';
             error404.classList.remove('fadeIn');
             const d = new Date();
+            const outfitSuggestion = document.querySelector('.weather-box .outfit');
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
-            const country = document.querySelector('.weather-box .cityName');
+            const CityName = document.querySelector('.weather-box .cityName');
             const description = document.querySelector('.weather-box .description');
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
@@ -64,10 +66,25 @@ search.addEventListener('click', () => {
 
                 default:
                     image.src = '';
-            }
+               }
+            
+
+ 
+                let tempResults = `${parseInt(json.main.temp)}`
+
+                 if(tempResults<16){
+                    outfitSuggestion.innerHTML =("It's cold, you might want to carry a jacket")
+                  }
+                 else if(tempResults<=21 && tempResults>=16){
+                    outfitSuggestion.innerHTML =("It is warm, you could wear t-shirt and jeans.")
+                 }
+                 else if(tempResults>21)
+                 outfitSuggestion.innerHTML =("It's a hot day, you can rock your shorts.")
+
 
             document.getElementById("currentTime").innerHTML = d;
-            country.innerHTML = `${json.name}`; 
+            CityName.innerHTML = `${json.name}`; 
+           
             humidity.innerHTML = `${json.main.humidity}%`
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
