@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.outfit{
+    color: #ca4c03;
+}
+
 #currentTime{
     font-weight: 800;
     font-size: small;
