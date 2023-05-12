@@ -9,7 +9,8 @@ search.addEventListener('click', () => {
 
     const APIKey = '21452fc695c401b2dbf1b432203486a7';
     // const city = document.querySelector('.search-box input').value;
-    const cityInput = document.getElementById("city-input").value;
+    let cityInput = document.getElementById("city-input").value;
+    document.getElementById("city-input").value = ""
     details.style.display = 'none';
 
     

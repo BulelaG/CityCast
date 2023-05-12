@@ -39,7 +39,7 @@ body{
     position: relative;
     width: 400px;
     height: 205px;
-    background: #99a1ce;
+    background: #b7b9c6;
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
@@ -100,7 +100,7 @@ body{
 }
 
 .weather-box img{
-    width: 30%;
+    width: 100%;
     /* margin-top: 30px; */
 }
 
