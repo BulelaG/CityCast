@@ -32,14 +32,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(145, 166, 199);
+    background-color: rgb(163, 181, 211);
 }
 
 .container{
     position: relative;
     width: 400px;
     height: 205px;
-    background: #b7b9c6;
+    background: #d8d9e2;
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
@@ -120,7 +120,7 @@ body{
 }
 
 .weather-box .description{
-    color: #6b6b4e;
+    color: #272712;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
@@ -158,13 +158,13 @@ body{
 }
 
 .weather-details span{
-    color: #327a42;
+    color: #46463f;
     font-size: 22px;
     font-weight: 500;
 }
 
 .weather-details p{
-    color: #327a42;
+    color: #816019;
     font-size: 14px;
     font-weight: 500;
 }
