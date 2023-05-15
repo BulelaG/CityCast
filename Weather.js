@@ -8,18 +8,18 @@ const details = document.querySelector('.weatherDetails')
 search.addEventListener('click', () => {
 
     const APIKey = '21452fc695c401b2dbf1b432203486a7';
-    // const city = document.querySelector('.search-box input').value;
+    const countryCode = document.getElementById("countryCode").value;
     let cityInput = document.getElementById("city-input").value;
     document.getElementById("city-input").value = ""
     details.style.display = 'none';
 
     
-    if (cityInput === '') {
+    if (cityInput === '' ||cityInput === '') {
         alert("Please enter a city name ");
         return;
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=${APIKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput},${countryCode}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
 
