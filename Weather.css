@@ -5,6 +5,9 @@
     outline: none;
     box-sizing: border-box;
 }
+.label{
+    display: flex;
+}
 
 .outfit{
     color: #ca4c03;

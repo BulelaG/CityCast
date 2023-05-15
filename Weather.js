@@ -8,14 +8,21 @@ const details = document.querySelector('.weatherDetails')
 search.addEventListener('click', () => {
 
     const APIKey = '21452fc695c401b2dbf1b432203486a7';
-    const countryCode = document.getElementById("countryCode").value;
+    const countryCode = document.getElementById('countryCode').value;
     let cityInput = document.getElementById("city-input").value;
     document.getElementById("city-input").value = ""
+    document.getElementById("countryCode").value = ""
+
     details.style.display = 'none';
 
     
-    if (cityInput === '' ||cityInput === '') {
+    if (cityInput === '' ) {
         alert("Please enter a city name ");
+        return;
+    }
+     
+    if (countryCode === '' ) {
+        alert("Please enter a country code ");
         return;
     }
 
